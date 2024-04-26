@@ -1,7 +1,7 @@
 <div class="container">
 <p>lista-persona works!</p>
 <div>
-    <a href="" class="btn btn-primary">Crear Persona</a>
+    <a href="/add" class="btn btn-primary">Crear Persona</a>
 </div>
     <table class="table">
         <thead>
@@ -24,8 +24,8 @@
                 <th scope="col">{{persona.SegundoNombre}}</th>
                 <th scope="col">{{persona.PrimerApellido}}</th>
                 <th scope="col">{{persona.SegundoApellido}}</th>
-                <th scope="col">Editar</th>
-                <th scope="col">Eliminar</th>
+                <th scope="col"><a href="/edit/{{persona.idPersona}}" class="btn btn-warning">Editar</a></th>
+                <th scope="col"><a href="/delete/{{persona.idPersona}}" class="btn btn-info">Eliminar</a></th>
             </tr>
         </tbody>
     </table>
