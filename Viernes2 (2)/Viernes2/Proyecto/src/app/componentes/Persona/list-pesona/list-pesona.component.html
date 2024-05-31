@@ -1,0 +1,32 @@
+<div class="container">
+<div>
+    <p>Lista Persona</p>
+</div>
+<div>
+    <a href="/add" class="btn btn-primary">Crear Persona</a>
+</div>
+<div>
+    <table class="table">
+        <thead>
+            <th>Identificador</th>
+            <th>Primer Nombre</th>
+            <th>Segundo Nombre</th>
+            <th>Primer Apellido</th>
+            <th>Segundo Apellido</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </thead>
+        <tbody>
+              <tr *ngFor="let persona of listaPersona">
+                <th>{{persona.identificacion}}</th>
+                <th>{{persona.primernombre}}</th>
+                <th>{{persona.segundonombre}}</th>
+                <th>{{persona.primerapellido}}</th>
+                <th>{{persona.segundoapellido}}</th>
+                <th><a href="/edit/{{persona.idpersona}}" class="btn btn-info">Editar</a></th>
+                <th><a href="/delete/{{persona.idpersona}}" class="btn btn-warning">Eliminar</a></th>
+              </tr>  
+        </tbody>
+    </table>
+</div>
+</div>

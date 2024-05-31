@@ -1,0 +1,45 @@
+<div class="container">
+    <div>
+        <h3>Crear Persona</h3>
+    </div>
+    <div>
+        <form [formGroup]="form" (ngSubmit)="addPersona()">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Identificacion</label>
+                    <input formControlName="identicacion" type="number" class="form-control" id="inputEmail4" placeholder="">
+                    <span *ngIf="form.get('identicacion')?.hasError('required')">
+                        El campo es <strong>Requerido</strong>
+                    </span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Primer Nombre</label>
+                    <input formControlName="primernombre" type="text" class="form-control" id="inputPassword4" placeholder="">
+                    <span *ngIf="form.get('primernombre')?.hasError('required')">
+                        El campo es <strong>Requerido</strong>
+                    </span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Segundo Nombre</label>
+                    <input formControlName="segundonombre"  type="text" class="form-control" id="inputEmail4" placeholder="">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Primer Apellido</label>
+                    <input formControlName="primerapellido"  type="text" class="form-control" id="inputPassword4" placeholder="">
+                    <span *ngIf="form.get('primerapellido')?.hasError('required')">
+                        El campo es <strong>Requerido</strong>
+                    </span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Segundo Apellido</label>
+                    <input formControlName="segundoapellido"  type="text" class="form-control" id="inputEmail4" placeholder="">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="form.invalid" (click)="addPersona()">Registrar</button>
+        </form>
+    </div>
+</div>
